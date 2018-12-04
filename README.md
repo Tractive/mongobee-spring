@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/tractive/mongobee-spring.svg)](https://jitpack.io/#tractive/mongobee-spring)
+
 # Mongobee Spring
 
 This library provides advanced Spring capabilities to [Mongobee](https://github.com/mongobee/mongobee).
