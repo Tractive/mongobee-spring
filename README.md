@@ -2,7 +2,7 @@
 
 # Mongobee Spring
 
-This library provides advanced Spring capabilities to [Mongobee](https://github.com/mongobee/mongobee).
+This library provides advanced Spring capabilities to [Mongobee](https://github.com/dalet-oss/mongobee).
 It acts as a Spring wrapper around this MongoDB database migration library. 
 As no appropriate hooks exist within `com.github.mongobee.Mongobee` a new class `com.tractive.mongobee.MongobeeSpring` was introduced, which internally utilizes the utility classes provided by Mongobee.
 

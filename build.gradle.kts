@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.github.tractive"
-version = "0.2.0-SNAPSHOT"
+version = "0.2.0"
 
 repositories {
     mavenCentral()
@@ -23,7 +23,7 @@ dependencies {
     compile(kotlin("stdlib-jdk8"))
     compileOnly("org.springframework.boot:spring-boot-autoconfigure")
     compileOnly("javax.validation:validation-api")
-    compileOnly("com.github.mongobee:mongobee:0.13")
+    compileOnly("com.github.dalet-oss:mongobee:1.0.4")
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
 }

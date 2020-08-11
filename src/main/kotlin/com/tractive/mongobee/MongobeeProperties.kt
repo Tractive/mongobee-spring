@@ -15,6 +15,14 @@ class MongobeeProperties {
     @NotBlank
     var lockCollectionName = "mongobeelock"
 
+    var waitForLock = false
+
+    var changeLogLockWaitTime = 5L
+
+    var changeLogLockPollRate = 10L
+
+    var throwExceptionIfCannotObtainLock = false
+
     /** The package which will be scanned for changelogs */
     @NotBlank
     lateinit var changeLogsScanPackage: String

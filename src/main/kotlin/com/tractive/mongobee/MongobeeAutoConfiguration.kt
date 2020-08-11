@@ -2,7 +2,6 @@ package com.tractive.mongobee
 
 import com.github.mongobee.dao.ChangeEntryDao
 import com.mongodb.MongoClient
-import com.mongodb.client.MongoDatabase
 import org.springframework.boot.autoconfigure.AutoConfigureAfter
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
@@ -40,7 +39,14 @@ class MongobeeAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     fun mongobeeChangeEntryDao(mongbeeProperties: MongobeeProperties) =
-        ChangeEntryDao(mongbeeProperties.changeLogCollectionName, mongbeeProperties.lockCollectionName)
+        ChangeEntryDao(
+            mongbeeProperties.changeLogCollectionName,
+            mongbeeProperties.lockCollectionName,
+            mongbeeProperties.waitForLock,
+            mongbeeProperties.changeLogLockWaitTime,
+            mongbeeProperties.changeLogLockPollRate,
+            mongbeeProperties.throwExceptionIfCannotObtainLock
+        )
 
     @Bean
     @ConditionalOnMissingBean
